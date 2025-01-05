@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Sent Successfully!</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS file -->
+    <style>
+        /* Additional styles for the success page */
+        body {
+            background-color: #f0f8ff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        h1 {
+            color: #28a745;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #555;
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        .celebration {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+        }
+
+        .confetti {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url('https://cdn.pixabay.com/photo/2016/11/29/09/08/confetti-1867260_1280.png') repeat;
+            opacity: 0.5;
+            animation: fall 3s infinite;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(100%); }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none; /* Remove underline */
+            display: inline-block; /* Make it behave like a button */
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="celebration">
+        <div class="confetti"></div>
+    </div>
+    <h1>🎉 Email Sent Successfully! 🎉</h1>
+    <p>Thank you for reaching out. Your email has been sent!</p>
+    <a href="emailForm.html" class="button">Send Another Email</a> <!-- Using <a> tag for navigation -->
+</body>
+</html>
